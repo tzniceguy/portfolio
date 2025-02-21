@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
+import Footer from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Beautiful Portifolio",
-  description: "crafted by tzniceguy",
+  title: "Beautiful Portfolio",
+  description: "Crafted by tzniceguy",
 };
 
 export default function RootLayout({
@@ -25,9 +26,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased p-6 md:px-24 md:py-12 suppress-hydration-warning`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-full p-6 md:px-24 md:py-12`}
       >
         <ThemeProvider
           attribute="class"
@@ -36,7 +37,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          {children}
+          <main className="h-full">{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
