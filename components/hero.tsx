@@ -1,9 +1,4 @@
 import { User } from "lucide-react";
-import {
-  SiReact,
-  SiNextdotjs,
-  SiTypescript,
-} from "@icons-pack/react-simple-icons";
 
 export default function Hero() {
   return (
@@ -20,11 +15,7 @@ export default function Hero() {
               .
             </span>
           </h1>
-          <div className="flex gap-2">
-            <SiReact color="#61DAFB" size={20} title="React" />
-            <SiNextdotjs color="#000000" size={20} title="Next.js" />
-            <SiTypescript color="#3178C6" size={20} title="TypeScript" />
-          </div>
+
           <div className="text-muted-foreground text-sm">
             Dar Es Salaam • UTC/GMT +3
           </div>
