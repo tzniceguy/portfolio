@@ -1,36 +1,31 @@
 "use client";
 
 import createGlobe from "cobe";
-import { SiGooglemaps } from "@icons-pack/react-simple-icons";
 import { useEffect, useRef } from "react";
-import { useSpring } from "react-spring";
+import { SiGooglemaps } from "@icons-pack/react-simple-icons";
 
-const LocationCard = () => {
+export default function LocationCard() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const pointerInteracting = useRef<number | null>(null);
-  const pointerInteractionMovement = useRef(0);
-  const fadeMask =
-    "radial-gradient(circle at 50% 50%, rgb(0, 0, 0) 60%, rgb(0, 0, 0, 0) 70%)";
 
-  const [{ r }, api] = useSpring(() => ({
-    r: 0,
-    config: {
-      mass: 1,
-      tension: 280,
-      friction: 40,
-      precision: 0.001,
-    },
-  }));
+  // Dar es Salaam coordinates
+  const darEsSalaamLat = -6.8235; // South
+  const darEsSalaamLon = 39.2695; // East
+
+  // Tentative coordinate conversion for cobe
+  const phi0 = Math.PI - (darEsSalaamLat * Math.PI) / 180; // ≈ 3.261 radians (π - lat for southern hemisphere)
+  const theta0 = (darEsSalaamLon * Math.PI) / 180; // ≈ 0.686 radians (direct lon)
 
   useEffect(() => {
     let width = 0;
 
     const onResize = () => {
-      if (canvasRef.current && (width = canvasRef.current.offsetWidth)) {
-        window.addEventListener("resize", onResize);
+      if (canvasRef.current) {
+        width = canvasRef.current.offsetWidth;
+        canvasRef.current.style.height = `${width}px`; // Ensure square aspect ratio
       }
     };
     onResize();
+    window.addEventListener("resize", onResize);
 
     if (!canvasRef.current) return;
 
@@ -38,20 +33,18 @@ const LocationCard = () => {
       devicePixelRatio: 2,
       width: width * 2,
       height: width * 2,
-      phi: 0,
-      theta: 0,
+      phi: phi0, // Vertical rotation
+      theta: theta0, // Horizontal rotation
       dark: 1,
       diffuse: 2,
-      mapSamples: 12_000,
+      mapSamples: 12000,
       mapBrightness: 2,
       baseColor: [0.8, 0.8, 0.8],
-      markerColor: [1, 1, 1],
+      markerColor: [1, 0, 0], // Red marker for Dar es Salaam
       glowColor: [0.5, 0.5, 0.5],
-
-      markers: [{ location: [-6.8235, 39.2695], size: 0.1 }],
-      scale: 1.05,
+      markers: [{ location: [darEsSalaamLat, darEsSalaamLon], size: 0.1 }],
+      scale: 1.0, // Full globe view
       onRender: (state) => {
-        state.phi = 2.75 + r.get();
         state.width = width * 2;
         state.height = width * 2;
       },
@@ -61,82 +54,22 @@ const LocationCard = () => {
       globe.destroy();
       window.removeEventListener("resize", onResize);
     };
-  }, [r]);
+  }, []);
 
   return (
-    <div className="shadow-feature-card relative flex h-60 flex-col gap-6 overflow-hidden rounded-xl p-4 lg:p-6">
-      <div className="flex items-center gap-2">
-        <SiGooglemaps className="size-[18px]" />
-        <h2 className="text-sm">{"Dar Es Salaam"}</h2>
+    <div className="shadow-feature-card rounded-xl p-4 lg:p-6">
+      <div className="flex items-center gap-2 mb-4">
+        <SiGooglemaps color="#4285F4" size={18} />
+        <h2 className="text-sm">Dar Es Salaam</h2>
       </div>
-      <div className="absolute inset-x-0 bottom-[-190px] mx-auto aspect-square h-[388px] [@media(max-width:420px)]:bottom-[-140px] [@media(max-width:420px)]:h-[320px] [@media(min-width:768px)_and_(max-width:858px)]:h-[350px]">
-        <div
-          style={{
-            width: "100%",
-            height: "100%",
-            display: "flex",
-            placeItems: "center",
-            placeContent: "center",
-            overflow: "visible",
-          }}
-        >
-          <div
-            style={{
-              width: "100%",
-              aspectRatio: "1/1",
-              maxWidth: 800,
-              WebkitMaskImage: fadeMask,
-              maskImage: fadeMask,
-            }}
-          >
-            <canvas
-              ref={canvasRef}
-              onPointerDown={(e) => {
-                pointerInteracting.current =
-                  e.clientX - pointerInteractionMovement.current;
-                if (canvasRef.current)
-                  canvasRef.current.style.cursor = "grabbing";
-              }}
-              onPointerUp={() => {
-                pointerInteracting.current = null;
-                if (canvasRef.current) canvasRef.current.style.cursor = "grab";
-              }}
-              onPointerOut={() => {
-                pointerInteracting.current = null;
-                if (canvasRef.current) canvasRef.current.style.cursor = "grab";
-              }}
-              onMouseMove={(e) => {
-                if (pointerInteracting.current !== null) {
-                  const delta = e.clientX - pointerInteracting.current;
-                  pointerInteractionMovement.current = delta;
-                  api.start({
-                    r: delta / 200,
-                  });
-                }
-              }}
-              onTouchMove={(e) => {
-                if (pointerInteracting.current !== null && e.touches[0]) {
-                  const delta =
-                    e.touches[0].clientX - pointerInteracting.current;
-                  pointerInteractionMovement.current = delta;
-                  api.start({
-                    r: delta / 100,
-                  });
-                }
-              }}
-              style={{
-                width: "100%",
-                height: "100%",
-                contain: "layout paint size",
-                cursor: "auto",
-                userSelect: "none",
-              }}
-            />
-          </div>
-        </div>
-      </div>
+      <canvas
+        ref={canvasRef}
+        style={{
+          width: "100%",
+          maxWidth: "600px", // Limit size for visibility
+          aspectRatio: "1 / 1",
+        }}
+      />
     </div>
   );
-};
-
-export default LocationCard;
+}
