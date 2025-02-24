@@ -32,6 +32,7 @@ export default function Header() {
   }, [isMenuOpen]);
 
   const navitems = [
+    { title: "about", href: "/about" },
     { title: "guestbook", href: "/guestbook" },
     { title: "projects", href: "/projects" },
     { title: "blog", href: "/blog" },
@@ -40,8 +41,8 @@ export default function Header() {
 
   return (
     <>
-      <div className="sticky top-4  z-50 backdrop-blur-md shadow-sm rounded-md border">
-        <div className="max-w-6xl mx-auto flex justify-between items-center px-2">
+      <div className="sticky top-4  z-50 backdrop-blur-md shadow-sm rounded-md border max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto flex justify-between items-center px-2">
           <div className="flex items-center space-x-2">
             <Link href="/">
               <User className="h-6 w-6" />

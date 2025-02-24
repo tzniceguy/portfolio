@@ -4,7 +4,7 @@ import Showcase from "@/components/showcase";
 
 export default function Home() {
   return (
-    <main>
+    <main className="max-w-4xl mx-auto">
       <Hero />
       <About />
       <Showcase />
