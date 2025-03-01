@@ -33,7 +33,7 @@ export default function Header() {
 
   const navitems = [
     { title: "about", href: "/about" },
-    { title: "guestbook", href: "/guestbook" },
+
     { title: "projects", href: "/projects" },
     { title: "blog", href: "/blog" },
     { title: "uses", href: "/uses" },
