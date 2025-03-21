@@ -10,7 +10,7 @@ export default function FavouriteStack() {
   const favouriteFrameworks = [
     { Icon: SiDjango, name: "Django", color: "#3776AB" },
     { Icon: SiFastapi, name: "FastAPI", color: "#3178C6" },
-    { Icon: SiNextdotjs, name: "Next.js", color: "#000000" },
+    { Icon: SiNextdotjs, name: "Next.js", color: "#6B7280" },
   ];
 
   return (

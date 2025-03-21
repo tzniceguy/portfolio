@@ -38,13 +38,13 @@ export default function ProjectCard({
           <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
         </div>
         <div className="flex items-center gap-2">
-          <p className="text-sm text-gray-500">{description}</p>
+          <p className="text-sm text-gray-">{description}</p>
         </div>
         <div className="flex gap-2">
           {stack.map((tech) => (
             <span
               key={tech}
-              className="px-3 py-1 text-xs rounded-full bg-gray-100 font-medium "
+              className="px-3 py-1 text-xs rounded-full bg-gray-100 dark:bg-gray-800 font-medium "
             >
               {tech}
             </span>

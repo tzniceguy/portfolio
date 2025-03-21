@@ -16,17 +16,16 @@ export default function Page() {
       {" "}
       {/* Added max-width for consistency */}
       <section className="my-12 pb-8 border-b border-gray-200">
-        <h1 className="text-3xl font-bold mb-4 capitalize">About</h1>
-        <p className="text-lg text-gray-700 leading-relaxed">
+        <h1 className="text-3xl font-bold mb-4 capitalize">about</h1>
+        <p className="text-lg leading-relaxed">
           Hi there! I am Joe, a software developer from Tanzania who loves to
           build things with modern web technologies.
         </p>
       </section>
       <section className="pb-8 border-b border-gray-200">
-        <h2 className="text-2xl font-bold mb-4 capitalize">Who Am I</h2>
-        <div className="text-gray-700 leading-relaxed space-y-4">
+        <h2 className="text-2xl font-bold mb-4 capitalize">who am i</h2>
+        <div className=" leading-relaxed space-y-4">
           {" "}
-          {/* Changed from p to div for nesting */}
           <p>
             I am a full-stack engineer from Tanzania, specializing in TypeScript
             and Python development. My journey in programming began in 2019 as a
@@ -110,13 +109,10 @@ export default function Page() {
             { label: "Styling", value: "TailwindCSS", icon: SiTailwindcss },
           ].map((item) => (
             <li key={item.label} className="flex items-center gap-2">
-              <span className="font-medium w-24 text-gray-600">
-                {item.label}:
-              </span>
-              <div className="flex items-center gap-2 text-gray-800">
+              <span className="font-medium w-24">{item.label}:</span>
+              <div className="flex items-center gap-2">
                 <span>{item.value}</span>
                 <item.icon color="#6B7280" size={20} />{" "}
-                {/* Adjusted size and color */}
               </div>
             </li>
           ))}

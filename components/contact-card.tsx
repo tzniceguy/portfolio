@@ -22,7 +22,7 @@ export default function SocialLinksCard() {
           rel="noopener noreferrer"
           className="flex items-center gap-2  hover:text-blue-700 transition-colors"
         >
-          <SiX color="#000000" size={24} />
+          <SiX color="#6B7280" size={24} />
           <span>X</span>
         </a>
         <a
@@ -31,7 +31,7 @@ export default function SocialLinksCard() {
           rel="noopener noreferrer"
           className="flex items-center gap-2  hover:text-blue-700 transition-colors"
         >
-          <SiDevdotto color="#000000" size={24} />{" "}
+          <SiDevdotto color="#6B7280" size={24} />{" "}
           {/* Dev.to icon with black color */}
           <span>Dev</span>
         </a>
@@ -41,7 +41,7 @@ export default function SocialLinksCard() {
           rel="noopener noreferrer"
           className="flex items-center gap-2  hover:text-blue-700 transition-colors"
         >
-          <SiGithub color="#181717" size={24} />
+          <SiGithub color="#6B7280" size={24} />
           <span>GitHub</span>
         </a>
         <a

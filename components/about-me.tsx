@@ -18,7 +18,7 @@ export default function About() {
         </div>
         <div className="flex flex-col gap-4">
           <SocialLinksCard />
-          <div className="flex flex-col sm:flex-row gap-4 h-full">
+          <div className="flex flex-col sm:flex-row gap-4">
             <FavouriteStack />
             <CodingHours />
           </div>
