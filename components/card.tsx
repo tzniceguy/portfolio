@@ -16,7 +16,7 @@ export default function Card({
   className,
 }: CardProps) {
   // Combine default classes with custom classes
-  const cardClasses = `rounded p-4 border shadow-sm hover:shadow-md transition-shadow w-full ${className || ""}`;
+  const cardClasses = `rounded-md p-4 border shadow-sm hover:shadow-md transition-shadow w-full ${className || ""}`;
 
   // If children are provided, use a simpler format
   if (children) {

@@ -4,6 +4,18 @@ import createGlobe from "cobe";
 import { useEffect, useRef } from "react";
 import { SiGooglemaps } from "@icons-pack/react-simple-icons";
 
+// Extend COBEOptions type
+declare module "cobe" {
+  interface COBEOptions {
+    enablePointerInteraction?: boolean;
+    rotateSpeed?: number;
+    dragInertia?: number;
+    autoRotate?: boolean;
+    autoRotateSpeed?: number;
+    interactive?: boolean;
+  }
+}
+
 export default function LocationCard() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
