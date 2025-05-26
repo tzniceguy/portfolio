@@ -1,6 +1,3 @@
-// app/about/page.js
-"use client"; // Added if you plan client-side features later
-
 import {
   SiNextdotjs,
   SiDjango,
@@ -8,13 +5,12 @@ import {
   SiVercel,
   SiMarkdown,
   SiTailwindcss,
-} from "@icons-pack/react-simple-icons"; // Switched to your preferred package
+} from "@icons-pack/react-simple-icons";
 
 export default function Page() {
   return (
     <main className="max-w-4xl mx-auto">
       {" "}
-      {/* Added max-width for consistency */}
       <section className="my-12 pb-8 border-b border-gray-200">
         <h1 className="text-3xl font-bold mb-4 capitalize">about</h1>
         <p className="text-lg leading-relaxed">
@@ -22,7 +18,7 @@ export default function Page() {
           build things with modern web technologies.
         </p>
       </section>
-      <section className="pb-8 border-b border-gray-200">
+      <section className="pb-8">
         <h2 className="text-2xl font-bold mb-4 capitalize">who am i</h2>
         <div className=" leading-relaxed space-y-4">
           {" "}
@@ -80,9 +76,11 @@ export default function Page() {
           <div className="mt-4">
             <p>My technical expertise includes:</p>
             <ul className="list-disc ml-6 mt-2 space-y-1">
-              <li>Building web applications with Next.js</li>
+              <li>Building web applications  with Next.js</li>
               <li>Developing mobile applications with React Native (Expo)</li>
-              <li>Database management</li>
+              <li>Creating backend system with Django, elysia and nestjs</li>
+              <li>Writing clean, maintainable code in TypeScript and Python</li>
+              <li>Management of cloud infrastructure</li>
               <li>Linux systems and Docker containerization</li>
             </ul>
           </div>
@@ -104,7 +102,7 @@ export default function Page() {
             { label: "Framework", value: "Next.js", icon: SiNextdotjs },
             { label: "Backend", value: "Django", icon: SiDjango },
             { label: "Database", value: "SQLite", icon: SiSqlite },
-            { label: "Deployment", value: "Vercel, Deploy.tz", icon: SiVercel },
+            { label: "Deployment", value: "Vercel", icon: SiVercel },
             { label: "Content", value: "Markdown", icon: SiMarkdown },
             { label: "Styling", value: "TailwindCSS", icon: SiTailwindcss },
           ].map((item) => (
