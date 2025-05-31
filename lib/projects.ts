@@ -1,71 +1,42 @@
-export const selectedProjects = [
-  {
-    title: "Project One",
-    url: "https://github.com/yourusername/project-one",
-    screenshot: "/projects/project-one.jpg",
-  },
-  {
-    title: "Project Two",
-    url: "https://github.com/yourusername/project-two",
-    screenshot: "/projects/project-two.jpg",
-  },
-];
-
 export const projects = [
   {
-    title: "Project One",
-    url: "https://github.com/yourusername/project-one",
+    title: "SNBL",
+    url: "https:snbl.vercel.app",
     screenshot: "/photo/test-image.jpg",
-    description: "This is a description of project one",
-    stack: ["React", "TailwindCSS"],
+    description:
+      "an e-commerce platform that accepts installment payments with Mobile Money and Bank integrated with azampesa for payment processing",
+    stack: ["NextJs", "TailwindCSS", "Django"],
   },
   {
-    title: "Project Two",
-    url: "https://github.com/yourusername/project-two",
+    title: "KofeeKafee",
+    url: "https://github.com/tzniceguy/koffikafee",
     screenshot: "/photo/test-image.jpg",
-    description: "This is a description of project two",
-    stack: ["Next.js", "ChakraUI"],
+    description:
+      "a mobile application for ordering coffee made with React Native",
+    stack: ["React Native", "ElysiaJs", "Drizzle"],
   },
   {
-    title: "Project Three",
-    url: "https://github.com/yourusername/project-three",
+    title: "Lugumya",
+    url: "https://github.com/tzniceguy/lugumya",
     screenshot: "/photo/test-image.jpg",
-    description: "This is a description of project three",
-    stack: ["Vue.js", "Bootstrap"],
+    description:
+      "a web and mobile application for budgeting and tracking expenses, income, and savings. ",
+    stack: ["React Native", "NestJs", "Prisma"],
   },
   {
-    title: "Project Four",
-    url: "https://github.com/yourusername/project-four",
+    title: "Tactical Defence Website",
+    url: "https://tacticaldefencetz.vercel.app",
     screenshot: "/photo/test-image.jpg",
-    description: "This is a description of project four",
-    stack: ["Angular", "Material UI"],
+    description:
+      "landing page for Tactical Defence, a company offering security solutions and army weapons solutions",
+    stack: ["NextJs", "TailwindCSS", "shadcn/ui"],
   },
   {
-    title: "Project Five",
-    url: "https://github.com/yourusername/project-five",
+    title: "Egesha",
+    url: "https://github.com/tzniceguy/egesha",
     screenshot: "/photo/test-image.jpg",
-    description: "This is a description of project five",
-    stack: ["Svelte", "Bulma"],
-  },
-  {
-    title: "Project Six",
-    url: "https://github.com/yourusername/project-six",
-    screenshot: "/photo/test-image.jpg",
-    description: "This is a description of project six",
-    stack: ["React Native", "Styled Components"],
-  },
-  {
-    title: "Project Seven",
-    url: "https://github.com/yourusername/project-seven",
-    screenshot: "/photo/test-image.jpg",
-    description: "This is a description of project seven",
-    stack: ["TypeScript", "Redux"],
-  },
-  {
-    title: "Project Eight",
-    url: "https://github.com/yourusername/project-eight",
-    screenshot: "/photo/test-image.jpg",
-    description: "This is a description of project eight",
-    stack: ["Node.js", "Express"],
+    description:
+      "a mobile application for parking booking, book and make reservation on available parking spots in Dar es Salaam without hassle",
+    stack: ["Django", "React Native", "React Native Maps", "NextJs"],
   },
 ];
