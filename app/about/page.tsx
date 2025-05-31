@@ -9,7 +9,7 @@ import {
 
 export default function Page() {
   return (
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <main className="max-w-4xl mx-auto">
         {/* Hero Section */}
         <section className="my-16 pb-12">
           <div className="relative">
@@ -20,7 +20,7 @@ export default function Page() {
               </h1>
               <p className="text-xl leading-relaxed">
                 Hi there! I am <span className="font-semibold">Joe</span>, a software developer from Tanzania who loves to
-                build things with modern web technologies.
+                build things with modern  technologies.
               </p>
             </div>
           </div>
