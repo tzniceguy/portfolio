@@ -1,42 +1,34 @@
-import { Mail, Github, Twitter } from "lucide-react";
+import { Heart, Coffee } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="mt-16 py-8 border-t border-gray-200 dark:border-gray-700">
-      <div className="max-w-6xl mx-auto px-4 flex flex-col items-center gap-6 text-center">
-        {/* Social Links */}
-        <div className="flex gap-6">
-          <a
-            href="mailto:your.email@example.com"
-            className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-            aria-label="Email"
-          >
-            <Mail className="w-6 h-6" />
-          </a>
-          <a
-            href="https://github.com/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-            aria-label="GitHub"
-          >
-            <Github className="w-6 h-6" />
-          </a>
-          <a
-            href="https://twitter.com/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-            aria-label="Twitter"
-          >
-            <Twitter className="w-6 h-6" />
-          </a>
+    <footer className="border-t border-gray-200 pt-8">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="flex items-center gap-2 text-sm text-gray-500">
+          <span>© {new Date().getFullYear()} Joe.</span>
+          <span className="hidden md:inline">•</span>
+          <span className="flex items-center gap-1">
+            Built with{" "}
+            <Heart size={12} className="text-red-500 animate-pulse" /> and lots
+            of
+            <Coffee size={12} className="text-amber-600" />
+          </span>
         </div>
 
-        {/* Copyright */}
-        <p className="text-sm text-gray-500 dark:text-gray-400">
-          © {new Date().getFullYear()} Joe.
-        </p>
+        {/* Tech Stack */}
+        <div className="flex items-center gap-2 text-xs opacity-60">
+          <span>Powered by</span>
+          <div className="flex items-center gap-1">
+            {["Next.js", "TypeScript", "Tailwind CSS"].map((tech, index) => (
+              <span key={tech} className="flex items-center">
+                {index > 0 && <span className="mx-1">•</span>}
+                <span className="hover:opacity-100 transition-opacity cursor-default">
+                  {tech}
+                </span>
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
     </footer>
   );
