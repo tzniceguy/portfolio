@@ -1,4 +1,4 @@
-import BlogShowcase from "@/components/blog-showcase";
+import BlogShowcase from "@/components/blog/blog-showcase";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

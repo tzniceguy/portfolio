@@ -124,7 +124,7 @@ export default function Social() {
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
-            Let's Connect
+            Let&apos;s Connect
           </h1>
 
           <p className="text-xl max-w-2xl mx-auto leading-relaxed mb-8">

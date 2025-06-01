@@ -41,12 +41,6 @@ function ItemGrid({ items, showSpecs = false }: ItemGridProps) {
 }
 
 export default function Page() {
-  const totalItems =
-    usesData.hardware.length +
-    usesData.software.length +
-    usesData.systems.length +
-    usesData.cloud.length;
-
   return (
     <main className="max-w-4xl mx-auto ">
       <section className="mb-16 mt-10">
