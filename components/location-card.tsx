@@ -1,7 +1,7 @@
 "use client";
 import createGlobe from "cobe";
 import { useEffect, useRef, useState } from "react";
-import { SiGooglemaps } from "react-icons/si";
+import { SiGooglemaps } from "@icons-pack/react-simple-icons";
 
 // Extend COBEOptions type
 declare module "cobe" {
@@ -46,7 +46,10 @@ export default function LocationCard() {
       }
     };
 
-    const debounce = <T extends (...args: unknown[]) => void>(func: T, wait: number) => {
+    const debounce = <T extends (...args: unknown[]) => void>(
+      func: T,
+      wait: number,
+    ) => {
       let timeout: NodeJS.Timeout;
       return function executedFunction(...args: Parameters<T>) {
         const later = () => {
