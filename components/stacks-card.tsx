@@ -12,7 +12,6 @@ import { Zap, Code2, Sparkles, TrendingUp } from "lucide-react";
 import { useState, FC } from "react";
 import { IconType } from "@icons-pack/react-simple-icons";
 
-// Define TypeScript interfaces for type safety
 interface TechStack {
   Icon: IconType;
   name: string;
@@ -24,7 +23,6 @@ interface ExperienceMap {
   [key: string]: number;
 }
 
-// Define the component as a Functional Component (FC)
 const StacksCard: FC = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
@@ -81,7 +79,7 @@ const StacksCard: FC = () => {
 
   return (
     <Card>
-      <div className="flex flex-col gap-4 p-2 sm:p-4 transition-opacity duration-200">
+      <div className="flex flex-col gap-4 p-2 transition-opacity duration-200">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="relative">

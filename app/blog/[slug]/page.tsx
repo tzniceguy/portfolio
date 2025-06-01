@@ -1,6 +1,7 @@
 import { posts } from "@/lib/blog";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { fetchPost } from "@/services/blog";
 
 type Props = {
   params: {

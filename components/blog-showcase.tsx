@@ -1,7 +1,17 @@
-import { posts } from "@/lib/blog";
+"use client";
 import Link from "next/link";
+import { fetchPosts } from "@/services/blog";
+import { useState } from "react";
+import { useEffect } from "react";
+import { Post } from "@/lib/types";
 
 export default function BlogShowcase() {
+  const [posts, setPosts] = useState<Post[]>([]);
+
+  useEffect(() => {
+    fetchPosts().then((data) => setPosts(data));
+  }, []);
+
   if (!posts.length) {
     return (
       <div className="text-center py-10">
@@ -22,9 +32,9 @@ export default function BlogShowcase() {
               {post.title}
             </h2>
             <div className="flex items-centr gap-2 mt-2">
-              <time className="text-sm text-gray-500">{post.date}</time>
+              <time className="text-sm text-gray-500">{post.created_at}</time>
             </div>
-            <p className="mt-2 text-base">{post.excerpt}</p>
+            <p className="mt-2 text-base">{post.slug}</p>
           </article>
         </Link>
       ))}
