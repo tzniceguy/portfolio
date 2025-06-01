@@ -2,7 +2,7 @@ import { Heart, Coffee } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-gray-200 pt-8">
+    <footer className="border-t border-gray-200 pt-8 max-w-4xl mx-auto">
       <div className="flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2 text-sm text-gray-500">
           <span>© {new Date().getFullYear()} Joe.</span>
