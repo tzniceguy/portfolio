@@ -15,14 +15,15 @@ import {
   SiObsidian,
   SiPycharm,
   SiWebstorm,
-  SiZedindustries, SiZenn,
+  SiZedindustries,
+  SiZenn,
 } from "@icons-pack/react-simple-icons";
 
 export const usesData = {
   hardware: [
     {
       id: "laptop",
-      name: "HP Pavilion x360 Convertible 14m-dw1xxx",
+      name: "HP Pavilion x360 Convertible 14",
       category: "Laptop",
       description:
         "My primary development machine. The convertible design is perfect for both coding and design work.",
@@ -140,11 +141,12 @@ export const usesData = {
       id: "zen",
       name: "Zen Browser",
       category: "Browser",
-      description: "Minimalist browser focused on productivity and distraction-free browsing",
+      description:
+        "Minimalist browser focused on productivity and distraction-free browsing",
       icon: SiZenn,
       usage: "Primary web browser for development and research",
       color: "#3B82F6",
-    }
+    },
   ],
   systems: [
     {
