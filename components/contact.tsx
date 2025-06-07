@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import { MessageCircle, Send } from "lucide-react";
 
 const Contact = () => {
@@ -14,7 +14,7 @@ const Contact = () => {
     setFormData({ name: "", email: "", message: "" });
   };
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e:React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -60,7 +60,6 @@ const Contact = () => {
             name="message"
             value={formData.message}
             onChange={handleInputChange}
-            rows="5"
             className="w-full bg-white/5 border  rounded-lg px-4 py-3  placeholder-gray-400 focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-200 resize-none"
             placeholder="Tell me about your project or just say hello!"
           ></textarea>
