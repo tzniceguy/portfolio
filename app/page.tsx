@@ -1,5 +1,4 @@
 import About from "@/components/about-me"
-import Contact from "@/components/contact"
 import Hero from "@/components/hero"
 import Social from "@/components/social"
 
@@ -9,7 +8,6 @@ export default function Home() {
 			<Hero />
 			<About />
 			<Social />
-			<Contact />
 		</main>
 	)
 }
