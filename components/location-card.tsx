@@ -150,7 +150,7 @@ export default function LocationCard() {
       </div>
 
       <div className="mt-6 flex justify-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-full text-sm text-slate-600 dark:text-slate-300 shadow-sm">
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-full text-sm text-slate-600 dark:text-slate-300 shadow-xs">
           <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
           <span className="font-medium">Current Location</span>
         </div>

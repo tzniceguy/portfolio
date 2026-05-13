@@ -18,10 +18,10 @@ export default function ItemCard({ item, showSpecs = false }: ItemCardProps) {
   const Icon = item.icon;
 
   return (
-    <div className="group rounded-xl p-6 shadow-sm border hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+    <div className="group rounded-xl p-6 shadow-xs border hover:shadow-md transition-all duration-300 hover:-translate-y-1">
       <div className="flex items-start gap-4">
         <div
-          className="p-3 rounded-lg flex-shrink-0 transition-transform duration-300 group-hover:scale-110"
+          className="p-3 rounded-lg shrink-0 transition-transform duration-300 group-hover:scale-110"
           style={{ backgroundColor: `${item.color}15` }}
         >
           <Icon size={24} style={{ color: item.color }} />

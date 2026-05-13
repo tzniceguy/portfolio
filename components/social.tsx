@@ -117,13 +117,13 @@ export default function Social() {
     <div className="min-h-screen mt-10">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-white/10">
+          <div className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-xs rounded-full px-4 py-2 mb-6 border border-white/10">
             <Globe className="w-4 h-4 text-cyan-400" />
             <span className="text-sm">Available worldwide</span>
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold bg-linear-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
             Let&apos;s Connect
           </h1>
 
@@ -149,23 +149,23 @@ export default function Social() {
               >
                 {/* Glow effect */}
                 <div
-                  className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl blur-xl"
+                  className="absolute inset-0 bg-linear-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl blur-xl"
                   style={{
                     background: `linear-gradient(135deg, ${item.color.split(" ")[1]}, ${item.color.split(" ")[3]})`,
                   }}
                 ></div>
                 {/* Card */}
-                <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105 overflow-hidden">
+                <div className="relative bg-white/5 backdrop-blur-xs rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105 overflow-hidden">
                   {/* Background pattern */}
                   <div className="absolute top-0 right-0 w-32 h-32 opacity-5">
-                    <div className="w-full h-full bg-gradient-to-br from-white to-transparent rounded-full transform translate-x-8 -translate-y-8"></div>
+                    <div className="w-full h-full bg-linear-to-br from-white to-transparent rounded-full transform translate-x-8 -translate-y-8"></div>
                   </div>
 
                   <div className="relative z-10">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-start gap-4">
                         <div
-                          className={`w-14 h-14 rounded-xl bg-gradient-to-r ${item.color} flex items-center justify-center flex-shrink-0 shadow-lg`}
+                          className={`w-14 h-14 rounded-xl bg-linear-to-r ${item.color} flex items-center justify-center shrink-0 shadow-lg`}
                         >
                           <IconComponent className="w-7 h-7" />
                         </div>
@@ -181,7 +181,7 @@ export default function Social() {
                       </div>
 
                       <div
-                        className={`w-8 h-8 rounded-lg bg-gradient-to-r ${item.color} flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0`}
+                        className={`w-8 h-8 rounded-lg bg-linear-to-r ${item.color} flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0`}
                       >
                         <ActionIcon className="w-4 h-4" />
                       </div>
@@ -208,7 +208,7 @@ export default function Social() {
                     {/* Progress bar animation */}
                     <div className="mt-3 h-0.5 bg-gray-700 rounded-full overflow-hidden">
                       <div
-                        className={`h-full bg-gradient-to-r ${item.color} transform transition-transform duration-500 ease-out ${hoveredIndex === index ? "translate-x-0" : "-translate-x-full"}`}
+                        className={`h-full bg-linear-to-r ${item.color} transform transition-transform duration-500 ease-out ${hoveredIndex === index ? "translate-x-0" : "-translate-x-full"}`}
                       ></div>
                     </div>
                   </div>

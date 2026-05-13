@@ -11,7 +11,7 @@ export default function StatsCard({
   color,
 }: CardProps) {
   return (
-    <div className=" rounded-xl p-6 shadow-sm border ">
+    <div className=" rounded-xl p-6 shadow-xs border ">
       <div className="flex items-center justify-between">
         <div>
           <p className="text-sm font-medium opacity-75">{title}</p>

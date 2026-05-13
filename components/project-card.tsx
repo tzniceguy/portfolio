@@ -107,7 +107,7 @@ export default function ProjectCard({
                   {stack.map((tech, index) => (
                     <span
                       key={tech}
-                      className="px-3 py-1.5 text-xs rounded-full  border  font-medium transition-all duration-200 hover:shadow-sm hover:scale-105"
+                      className="px-3 py-1.5 text-xs rounded-full  border  font-medium transition-all duration-200 hover:shadow-xs hover:scale-105"
                       style={{
                         animationDelay: `${index * 100}ms`,
                       }}

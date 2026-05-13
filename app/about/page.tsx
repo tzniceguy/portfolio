@@ -13,8 +13,8 @@ export default function Page() {
         {/* Hero Section */}
         <section className="my-16 pb-12">
           <div className="relative">
-            <div className="absolute -inset-1 rounded-lg blur opacity-20"></div>
-            <div className="relative  rounded-lg p-8 shadow-sm border ">
+            <div className="absolute -inset-1 rounded-lg blur-sm opacity-20"></div>
+            <div className="relative  rounded-lg p-8 shadow-xs border ">
               <h1 className="text-4xl sm:text-5xl font-bold mb-6 capitalize">
                 About
               </h1>
@@ -28,9 +28,9 @@ export default function Page() {
 
         {/* Who Am I Section */}
         <section className="pb-16">
-          <div className="bg-gradient-to-br rounded-xl p-8 shadow-sm border ">
+          <div className="bg-linear-to-br rounded-xl p-8 shadow-xs border ">
             <h2 className="text-3xl font-bold mb-8 capitalize flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-orange-500 to-orange-600 rounded-full"></span>
+              <span className="w-2 h-8 bg-linear-to-b from-orange-500 to-orange-600 rounded-full"></span>
               Who Am I
             </h2>
 
@@ -89,7 +89,7 @@ export default function Page() {
               </div>
 
               {/* Technical Skills */}
-              <div className="rounded-lg p-6 shadow-sm border">
+              <div className="rounded-lg p-6 shadow-xs border">
                 <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
                 <span className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
                   <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
@@ -106,7 +106,7 @@ export default function Page() {
                     "Linux systems and Docker containerization"
                   ].map((skill, index) => (
                       <div key={index} className="flex items-start gap-3 p-3 rounded-lg ">
-                        <span className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></span>
+                        <span className="w-2 h-2 bg-orange-400 rounded-full mt-2 shrink-0"></span>
                         <span>{skill}</span>
                       </div>
                   ))}
@@ -114,7 +114,7 @@ export default function Page() {
               </div>
 
               {/* Soft Skills */}
-              <div className="rounded-lg p-6 shadow-sm border ">
+              <div className="rounded-lg p-6 shadow-xs border ">
                 <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
                 <span className="w-6 h-6  rounded-full flex items-center justify-center">
                   <span className="w-2 h-2 bg-green-500 rounded-full"></span>
@@ -141,9 +141,9 @@ export default function Page() {
 
         {/* Tech Stack Section */}
         <section className="pb-16">
-          <div className=" rounded-xl p-8 shadow-sm border">
+          <div className=" rounded-xl p-8 shadow-xs border">
             <h2 className="text-3xl font-bold mb-8 capitalize flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-purple-500 to-purple-600 rounded-full"></span>
+              <span className="w-2 h-8 bg-linear-to-b from-purple-500 to-purple-600 rounded-full"></span>
               About This Site
             </h2>
 
@@ -158,7 +158,7 @@ export default function Page() {
               ].map((item) => (
                   <div
                       key={item.label}
-                      className="e rounded-lg p-6 shadow-sm border  hover:shadow-md transition-all duration-300 hover:-translate-y-1 group"
+                      className="e rounded-lg p-6 shadow-xs border  hover:shadow-md transition-all duration-300 hover:-translate-y-1 group"
                   >
                     <div className="flex items-center gap-3 mb-2">
                       <div className="p-2  rounded-lg group-hover:bg-gray-100 transition-colors duration-200">

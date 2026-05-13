@@ -40,7 +40,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="sticky top-4  z-50 backdrop-blur-md shadow-sm rounded-md border max-w-4xl mx-auto">
+      <div className="sticky top-4  z-50 backdrop-blur-md shadow-xs rounded-md border max-w-4xl mx-auto">
         <div className="max-w-4xl mx-auto flex justify-between items-center px-2">
           <div className="flex items-center space-x-2">
             <Link href="/">

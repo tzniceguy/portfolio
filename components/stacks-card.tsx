@@ -115,7 +115,7 @@ const StacksCard: FC = () => {
           {stack.map(({ Icon, name, color, description }, index) => (
             <div
               key={name}
-              className="group relative overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 p-3 transition-all duration-300 hover:shadow-lg hover:scale-105 cursor-pointer"
+              className="group relative overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-linear-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 p-3 transition-all duration-300 hover:shadow-lg hover:scale-105 cursor-pointer"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
               role="button"
@@ -138,7 +138,7 @@ const StacksCard: FC = () => {
               <div className="relative z-10 flex flex-col gap-2">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <div className="p-1.5 rounded-md bg-white dark:bg-gray-800 shadow-sm group-hover:shadow-md transition-shadow duration-300">
+                    <div className="p-1.5 rounded-md bg-white dark:bg-gray-800 shadow-xs group-hover:shadow-md transition-shadow duration-300">
                       <Icon color={color} size={18} />
                     </div>
                     <div className="flex flex-col">
