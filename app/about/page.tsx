@@ -100,9 +100,9 @@ export default function Page() {
 							</h3>
 							<div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
 								{[
-									"Building web applications with Next.js",
+									"Building web applications with React (NextJS and Tanstack Start)",
 									"Developing mobile applications with React Native (Expo)",
-									"Creating backend systems with Django, Elysia and NestJS",
+									"Creating backend systems with Django, Elysia and FastAPI",
 									"Writing clean, maintainable code in TypeScript and Python",
 									"Management of cloud infrastructure",
 									"Linux systems and Docker containerization",
@@ -163,23 +163,12 @@ export default function Page() {
 								icon: SiNextdotjs,
 								color: "#374151",
 							},
-							{
-								label: "Backend",
-								value: "Django",
-								icon: SiDjango,
-								color: "#059669",
-							},
-							{
-								label: "Database",
-								value: "SQLite",
-								icon: SiSqlite,
-								color: "#0369a1",
-							},
+
 							{
 								label: "Deployment",
 								value: "Vercel",
 								icon: SiVercel,
-								color: "#7c3aed",
+								color: "#00000",
 							},
 							{
 								label: "Content",
