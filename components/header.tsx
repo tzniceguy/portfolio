@@ -1,42 +1,42 @@
-"use client";
-import { Menu, User, X } from "lucide-react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-import { ModeToggle } from "./toggle-theme";
+"use client"
+import { Menu, User, X } from "lucide-react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { useEffect, useState } from "react"
+import { ModeToggle } from "./toggle-theme"
 
 export default function Header() {
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const pathname = usePathname();
+	const [isMenuOpen, setIsMenuOpen] = useState(false)
+	const pathname = usePathname()
 
 	// Close menu when pressing escape key
 	useEffect(() => {
 		const handleEsc = (event: globalThis.KeyboardEvent) => {
-			if (event.key === "Escape") setIsMenuOpen(false);
-		};
+			if (event.key === "Escape") setIsMenuOpen(false)
+		}
 
-		window.addEventListener("keydown", handleEsc);
-		return () => window.removeEventListener("keydown", handleEsc);
-	}, []);
+		window.addEventListener("keydown", handleEsc)
+		return () => window.removeEventListener("keydown", handleEsc)
+	}, [])
 
 	// Prevent scrolling when menu is open
 	useEffect(() => {
 		if (isMenuOpen) {
-			document.body.style.overflow = "hidden";
+			document.body.style.overflow = "hidden"
 		} else {
-			document.body.style.overflow = "auto";
+			document.body.style.overflow = "auto"
 		}
 		return () => {
-			document.body.style.overflow = "auto";
-		};
-	}, [isMenuOpen]);
+			document.body.style.overflow = "auto"
+		}
+	}, [isMenuOpen])
 
 	const navitems = [
 		{ title: "about", href: "/about" },
 		{ title: "projects", href: "/projects" },
 		{ title: "uses", href: "/uses" },
 		//{ title: "blog", href: "/blog" },
-	];
+	]
 
 	return (
 		<>
@@ -156,5 +156,5 @@ export default function Header() {
         }
       `}</style>
 		</>
-	);
+	)
 }

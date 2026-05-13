@@ -1,10 +1,10 @@
-"use client";
+"use client"
 import {
 	type IconType,
 	SiGithub,
 	SiGmail,
 	SiX,
-} from "@icons-pack/react-simple-icons";
+} from "@icons-pack/react-simple-icons"
 import {
 	Check,
 	Copy,
@@ -13,36 +13,36 @@ import {
 	type LucideIcon,
 	MessageCircle,
 	Users,
-} from "lucide-react";
-import { useState } from "react";
+} from "lucide-react"
+import { useState } from "react"
 
 // Define interface for contact items
 interface ContactItem {
-	icon: LucideIcon | IconType;
-	platform: string;
-	contact: string;
-	href: string;
-	color: string;
-	description: string;
-	stats: string;
-	action: "copy" | "visit" | "connect" | "follow";
+	icon: LucideIcon | IconType
+	platform: string
+	contact: string
+	href: string
+	color: string
+	description: string
+	stats: string
+	action: "copy" | "visit" | "connect" | "follow"
 }
 
 // Define interface for stats
 interface Stats {
-	connections: number;
-	followers: number;
-	projects: number;
+	connections: number
+	followers: number
+	projects: number
 }
 
 export default function Social() {
-	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-	const [copiedEmail, setCopiedEmail] = useState<boolean>(false);
+	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+	const [copiedEmail, setCopiedEmail] = useState<boolean>(false)
 	const [stats] = useState<Stats>({
 		connections: 847,
 		followers: 234,
 		projects: 42,
-	});
+	})
 
 	const contact: ContactItem[] = [
 		{
@@ -76,36 +76,36 @@ export default function Social() {
 			stats: `${stats.followers} followers`,
 			action: "follow",
 		},
-	];
+	]
 
 	const handleEmailCopy = () => {
-		navigator.clipboard.writeText("joeshimbi@gmail.com");
-		setCopiedEmail(true);
-		setTimeout(() => setCopiedEmail(false), 2000);
-	};
+		navigator.clipboard.writeText("joeshimbi@gmail.com")
+		setCopiedEmail(true)
+		setTimeout(() => setCopiedEmail(false), 2000)
+	}
 
 	const getActionIcon = (action: ContactItem["action"]): LucideIcon => {
 		switch (action) {
 			case "copy":
-				return copiedEmail ? Check : Copy;
+				return copiedEmail ? Check : Copy
 			case "visit":
-				return ExternalLink;
+				return ExternalLink
 			case "connect":
-				return Users;
+				return Users
 			case "follow":
-				return MessageCircle;
+				return MessageCircle
 			default:
-				return ExternalLink;
+				return ExternalLink
 		}
-	};
+	}
 
 	const handleCardClick = (item: ContactItem) => {
 		if (item.action === "copy") {
-			handleEmailCopy();
+			handleEmailCopy()
 		} else {
-			window.open(item.href, "_blank");
+			window.open(item.href, "_blank")
 		}
-	};
+	}
 
 	return (
 		<div className="min-h-screen mt-10">
@@ -130,8 +130,8 @@ export default function Social() {
 				{/* Contact Cards */}
 				<div className="grid md:grid-cols-2 gap-6 mb-12">
 					{contact.map((item, index) => {
-						const IconComponent = item.icon;
-						const ActionIcon = getActionIcon(item.action);
+						const IconComponent = item.icon
+						const ActionIcon = getActionIcon(item.action)
 
 						return (
 							<div
@@ -208,10 +208,10 @@ export default function Social() {
 									</div>
 								</div>
 							</div>
-						);
+						)
 					})}
 				</div>
 			</div>
 		</div>
-	);
+	)
 }
