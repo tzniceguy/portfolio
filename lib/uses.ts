@@ -3,21 +3,12 @@ import {
 	SiBruno,
 	SiDigitalocean,
 	SiHetzner,
-	SiManjaro,
+	SiNeovim,
 	SiObsidian,
-	SiPycharm,
-	SiWebstorm,
 	SiZedindustries,
 	SiZenn,
 } from "@icons-pack/react-simple-icons"
-import {
-	Code,
-	HardDrive,
-	Laptop,
-	Monitor,
-	Smartphone,
-	Terminal,
-} from "lucide-react"
+import { HardDrive, Laptop, Monitor, Smartphone, Terminal } from "lucide-react"
 
 export const usesData = {
 	hardware: [
@@ -57,7 +48,7 @@ export const usesData = {
 		},
 		{
 			id: "phone",
-			name: "iPhone 12",
+			name: "iPhone 13 ProMax",
 			category: "Mobile",
 			description:
 				"My daily driver for testing mobile apps, communication, and staying connected on the go.",
@@ -74,37 +65,16 @@ export const usesData = {
 			description:
 				"Lightning-fast code editor with excellent performance and modern features.",
 			icon: SiZedindustries,
-			usage: "Primary editor for quick edits and lightweight projects",
+			usage: "AI-assisted development and complex refactoring",
 			color: "#084CCF",
 		},
 		{
-			id: "cursor",
-			name: "Cursor",
-			category: "AI Code Editor",
-			description:
-				"AI-powered code editor that enhances productivity with intelligent suggestions.",
-			icon: Code,
-			usage: "AI-assisted development and complex refactoring",
-			color: "#6366F1",
-		},
-		{
-			id: "webstorm",
-			name: "JetBrains WebStorm",
+			id: "neovim",
+			name: "Neovim",
 			category: "IDE",
-			description:
-				"Powerful IDE for JavaScript and web development with advanced debugging tools.",
-			icon: SiWebstorm,
-			usage: "Full-stack web development projects",
-			color: "#06B6D4",
-		},
-		{
-			id: "pycharm",
-			name: "JetBrains PyCharm",
-			category: "IDE",
-			description:
-				"Professional Python IDE with comprehensive tools for Django and data science.",
-			icon: SiPycharm,
-			usage: "Python development and Django projects",
+			description: "The best text editor",
+			icon: SiNeovim,
+			usage: "primaty editor for quick edits",
 			color: "#22C55E",
 		},
 		{
@@ -158,16 +128,6 @@ export const usesData = {
 			icon: SiArchlinux,
 			usage: "Primary development environment",
 			color: "#1E40AF",
-		},
-		{
-			id: "manjaro",
-			name: "Manjaro Linux",
-			category: "Operating System",
-			description:
-				"User-friendly Arch-based distribution with excellent hardware support and stability.",
-			icon: SiManjaro,
-			usage: "Alternative setup for specific projects",
-			color: "#059669",
 		},
 	],
 	cloud: [
