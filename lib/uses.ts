@@ -6,7 +6,7 @@ import {
 	SiNeovim,
 	SiObsidian,
 	SiZedindustries,
-	SiZenn,
+	SiZenbrowser,
 } from "@icons-pack/react-simple-icons"
 import { HardDrive, Laptop, Monitor, Smartphone, Terminal } from "lucide-react"
 
@@ -113,7 +113,7 @@ export const usesData = {
 			category: "Browser",
 			description:
 				"Minimalist browser focused on productivity and distraction-free browsing",
-			icon: SiZenn,
+			icon: SiZenbrowser,
 			usage: "Primary web browser for development and research",
 			color: "#3B82F6",
 		},
